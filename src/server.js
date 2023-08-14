@@ -23,14 +23,12 @@ app.engine(
 app.set("view engine", ".hbs"); // aca hago uso de engine y que extencion de archivo quiero que abra
 
 // Middleware
-app.use(express.urlencoded({ extended: false }));//le da formato automaticamente a los datos en formato JSON
+app.use(express.urlencoded({ extended: false })); //le da formato automaticamente a los datos en formato JSON
 
 // Global Variables
 
 // Routes
-app.get("/", (req, res) => {
-  res.render("index");
-});
+app.use(require("./routes/index.routes"));//llamo al archivo router 
 
 // Static files
 app.use(express.static(path.join(__dirname, "public"))); //me permite decirle a node donde esta carpeta public
