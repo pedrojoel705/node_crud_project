@@ -28,8 +28,8 @@ app.use(express.urlencoded({ extended: false })); //le da formato automaticament
 // Global Variables
 
 // Routes
-app.use(require("./routes/index.routes")); //llamo al archivo router
-app.use(require("./routes/notes.routes"));
+app.use(require("./routes/index.routes")); //llamo al archivo index.router
+app.use(require("./routes/notes.routes")); //llamo el archivo de notes.router
 
 
 // Static files
