@@ -1,4 +1,5 @@
-const { Schema, model } = require("mongoose");
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const NoteSchema = new Schema(
   {
@@ -6,14 +7,14 @@ const NoteSchema = new Schema(
       type: String,
       required: true,
     },
-    descriptions: {
+    description: {
       type: String,
-      require: true,
+      required: true, // Cambiado "require" a "required"
     },
   },
   {
-    timesTamps: true, // esto me permite agg fecha de creacion y actualizacion de maneta auntomatica
+    timestamps: true, // Cambiado "timesTamps" a "timestamps"
   }
 );
 
-module.exports = model("Note", NoteSchema)
+module.exports = mongoose.model('Note', NoteSchema); // Cambiado "model" a "mongoose.model"

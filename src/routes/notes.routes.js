@@ -13,11 +13,10 @@ const {
 
 //new notes
 router.get("/notes/add", renderNoteForm);
+router.post("/notes/new-note", createNewNote);
 
-router.post("/notes/add", createNewNote);
 
 //get all notes
-
 router.get("/notes", renderAllNotes);
 
 //Edit notes

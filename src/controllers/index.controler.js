@@ -10,11 +10,11 @@ ctrlRoute.renderAbout=(req,res)=>{
 }
 
 ctrlRoute.renderRegistrer=(req,res)=>{
-    res.render('registrer')
+    res.render('./user/registrer')
 }
 
 ctrlRoute.renderLogin=(req,res)=>{
-    res.render('login')
+    res.render('./user/login')
 }
 
 module.exports=ctrlRoute
